@@ -7,7 +7,7 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-
+ 
 
 /* ---- Base Rules ---- */
 body {
@@ -25,6 +25,19 @@ h1 {
     font-size: 3em;
     margin: 2em 1rem;
 }
+
+Styles for tablet and mobile
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 5em;
+    }
+
+    .navbar__menu li {
+        display: block;
+        text-align: center;
+    }
+}
+
 
 @media only screen and (min-width: 35em){
     h1 {
@@ -88,6 +101,10 @@ section {
     transition: ease 0.3s all;
 }
 
+.navbar__menu .menu__link.active {
+    color: #0954e0;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -102,6 +119,7 @@ section {
     background: #000;
     padding: 3em;
     color: #fff;
+    text-align: center;
 }
 
 .page__footer p{
@@ -207,6 +225,7 @@ section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
+
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
